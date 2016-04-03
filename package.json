@@ -1,15 +1,19 @@
 {
   "name": "rn-youtube-android",
   "version": "1.0.0",
-  "description": "Play fullscreen videos in React-Native using Youtube API ",
+  "description": "Play fullscreen videos in React-Native using Youtube API",
   "main": "index.js",
   "scripts": {},
   "author": "Applicaster",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "android",
     "react-component",
     "react-native",
     "youtube"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applicaster/rn-youtube-player.git"
+  }
 }
