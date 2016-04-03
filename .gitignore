@@ -29,3 +29,7 @@ jspm_packages
 
 # Optional npm cache directory
 .npm
+
+# Android
+android/build
+*.iml

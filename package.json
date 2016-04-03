@@ -12,6 +12,7 @@
     "react-native",
     "youtube"
   ],
+  "main": "youtube-player.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/applicaster/rn-youtube-player.git"

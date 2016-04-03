@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.applicaster.RNYouTubePlayer">
+	<application>
+	<activity
+		android:screenOrientation="sensorLandscape"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:name="com.applicaster.RNYouTubePlayer.YoutubePlayerActivity"
+		android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+	</activity>
+</application>
+</manifest>
