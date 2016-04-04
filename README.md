@@ -6,7 +6,7 @@ Play videos from YouTube using YouTube's API, in React Native.
 
 ## Notice
 - Since it is a React Native project, it was developed and tested on OSX only, I apologize for the linux folks.
-- Intended **only** for existing Android apps that are integrating React Native - [Facebook's instructions]( https://facebook.github.io/react-native/docs/embedded-app-android.html)
+- Intended **only** for existing Android apps that are integrating React Native - [Facebook's instructions]( https://facebook.github.io/react-native/docs/embedded-app-android.html).
 - Make sure you have the latest React Native/Babel/random cool stuff in your project.
 
 ## Getting Started
