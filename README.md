@@ -1,4 +1,4 @@
-## rn-youtube-player [![npm version](https://badge.fury.io/js/rn-youtube-android.svg)](https://badge.fury.io/js/rn-youtube-android)
+## rn-youtube-android [![npm version](https://badge.fury.io/js/rn-youtube-android.svg)](https://badge.fury.io/js/rn-youtube-android)
 
 > **Important: Android only**
 
