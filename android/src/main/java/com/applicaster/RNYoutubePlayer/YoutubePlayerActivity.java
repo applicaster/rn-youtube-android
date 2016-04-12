@@ -46,7 +46,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         if (!wasRestored) {
             Intent intent = getIntent();
             String videoURL = intent.getExtras().getString("videoURL");
-            player.cueVideo(videoURL);
+            player.loadVideo(videoURL);
         }
     }
 
