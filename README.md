@@ -16,7 +16,7 @@ Play videos from YouTube using YouTube's API, in React Native.
 include ':RNYouTubePlayer', ':app'
 project(':RNYouTubePlayer').projectDir = new File(rootProject.projectDir, '<your node_modules path>/rn-youtube-android/android')
 ```
-- Add to `app.gradle`:
+- Add to `build.gradle`:
 ```
 dependencies {
     ...
