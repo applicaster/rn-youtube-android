@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class YoutubePlayerModule extends ReactContextBaseJavaModule implements ActivityEventListener {
     protected static final String TAG = "YoutubePlayerModule";
+    private static final String STATE_STOPPED = "stopped";
     private static final int YOUTUBE_PLAYER_ACTIVITY = 987654; // TODO: should be moved to values.xml
 
     final ReactApplicationContext reactContext;
@@ -56,7 +57,7 @@ public class YoutubePlayerModule extends ReactContextBaseJavaModule implements A
         if (requestCode == YOUTUBE_PLAYER_ACTIVITY && resultCode == Activity.RESULT_CANCELED) {
             Log.d(TAG, "promise resolved");
             WritableMap map = Arguments.createMap();
-            map.putBoolean("res", true);
+            map.putString("state", STATE_STOPPED);
             promise.resolve(map);
         }
     }

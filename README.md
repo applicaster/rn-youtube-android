@@ -62,10 +62,10 @@ RNYouTubePlayer.play(<youtube api token>, <youtube video url - hash only>);
 playVideo = async function(props, callback) { // example: token and video url exists in props
   try {
     let {
-      result,
+      state,
     } = await RNYouTubePlayer.play(props.apiToken, props.videoURL);
 
-    if (res === true) {
+    if (state === 'stopped') {
       callback(); // stopped watching video, do something
     }
   } catch (e) {
