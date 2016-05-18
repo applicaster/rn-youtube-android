@@ -13,7 +13,7 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:0.20.+'
+    compile 'com.facebook.react:react-native:+'
 
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
