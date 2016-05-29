@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -22,10 +23,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                      | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
+        hideNavigation();
 
         LinearLayout layout = new LinearLayout(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
@@ -44,6 +42,19 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         apiToken = intent.getExtras().getString("apiToken");
 
         youTubeView.initialize(apiToken, this);
+    }
+
+    private void hideNavigation() {
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                      | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
+    Override
+    protected void onResume() {
+        super.onResume();
+        hideNavigation();
     }
 
     @Override
