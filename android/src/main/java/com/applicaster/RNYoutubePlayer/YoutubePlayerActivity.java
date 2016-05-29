@@ -51,7 +51,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    Override
+    @Override
     protected void onResume() {
         super.onResume();
         hideNavigation();
