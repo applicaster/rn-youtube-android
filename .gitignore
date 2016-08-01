@@ -33,3 +33,12 @@ jspm_packages
 # Android
 android/build
 *.iml
+
+Android Studio
+*.iml
+*.gradle
+android/.idea
+android/build
+android/captures
+
+
