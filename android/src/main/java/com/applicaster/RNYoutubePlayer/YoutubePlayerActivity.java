@@ -18,12 +18,12 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView youTubeView;
     private String apiToken;
+    private View decorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        hideNavigation();
+        decorView = getWindow().getDecorView();
 
         LinearLayout layout = new LinearLayout(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
@@ -44,17 +44,19 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         youTubeView.initialize(apiToken, this);
     }
 
-    private void hideNavigation() {
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                      | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-    }
-
     @Override
-    protected void onResume() {
-        super.onResume();
-        hideNavigation();
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+            );
+        }
     }
 
     @Override
@@ -62,6 +64,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         if (!wasRestored) {
             Intent intent = getIntent();
             String videoURL = intent.getExtras().getString("videoURL");
+            player.setShowFullscreenButton(false);
             player.loadVideo(videoURL);
         }
     }

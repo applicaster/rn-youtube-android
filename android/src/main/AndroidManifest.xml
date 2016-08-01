@@ -2,7 +2,7 @@
 	package="com.applicaster.RNYouTubePlayer">
 	<application>
 	<activity
-		android:screenOrientation="sensorLandscape"
+		android:screenOrientation="sensor"
 		android:configChanges="keyboardHidden|orientation|screenSize"
 		android:name="com.applicaster.RNYouTubePlayer.YoutubePlayerActivity"
 		android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
