@@ -39,6 +39,7 @@ Android Studio
 *.gradle
 android/.idea
 android/build
-android/captures
+android/gradle
+android/local.properties
 
 
