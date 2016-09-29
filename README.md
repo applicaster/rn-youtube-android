@@ -5,7 +5,8 @@
 Play videos from YouTube using YouTube's API, in React Native.
 
 ## Known Issues
-:danger: Works reliably only up to version 0.30. :danger:
+:warning: Works reliably only up to version <= 0.30. :warning:
+
 Between versions 0.31-0.33 of react-native there's a breaking change in the activity listener/result handling which can crash the application. Work in under way, thanks for your patience.
 
 ## Notice
