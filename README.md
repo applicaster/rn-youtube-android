@@ -5,9 +5,10 @@
 Play videos from YouTube using YouTube's API, in React Native.
 
 ## Known Issues
-:warning: Works reliably only up to version <= 0.30. :warning:
-
-Between versions 0.31-0.33 of react-native there's a breaking change in the activity listener/result handling which can crash the application. Work in under way, thanks for your patience.
+:warning: Works reliably on version 0.29 >= <= 0.34 of react-native :warning:
+Due to react-native's high change pace, I cannot guarentee that this package will work
+on other versions.
+Plays fullscreen videos only, in landscape mode only. PRs are welcome :)
 
 ## Notice
 - Since it is a React Native project, it was developed and tested on OSX only, I apologize for the linux folks.
@@ -64,11 +65,11 @@ RNYouTubePlayer.play(<youtube api token>, <youtube video url - hash only>);
 ```
 - It is highly recommended to surround the player with `await / async` in order to reap the future benefits of callbacks:
 ```
-playVideo = async function(props, callback) { // example: token and video url exists in props
+playVideo = async function(callback) { // example: token and video url exists in props
   try {
     let {
       state,
-    } = await RNYouTubePlayer.play(props.apiToken, props.videoURL);
+    } = await RNYouTubePlayer.play('<< YouTube API Token >>', 'KawcajJGX-w');
 
     if (state === 'stopped') {
       callback(); // stopped watching video, do something
