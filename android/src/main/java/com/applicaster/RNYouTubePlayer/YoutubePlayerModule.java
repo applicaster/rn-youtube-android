@@ -51,16 +51,16 @@ public class YoutubePlayerModule extends ReactContextBaseJavaModule implements A
         currentActivity.startActivityForResult(intent, YOUTUBE_PLAYER_ACTIVITY);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.d(TAG, "on activity result");
-        if (requestCode == YOUTUBE_PLAYER_ACTIVITY && resultCode == Activity.RESULT_CANCELED) {
-            Log.d(TAG, "promise resolved");
-            WritableMap map = Arguments.createMap();
-            map.putString("state", STATE_STOPPED);
-            promise.resolve(map);
-        }
-    }
+    // @Override
+    // public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    //     Log.d(TAG, "on activity result");
+    //     if (requestCode == YOUTUBE_PLAYER_ACTIVITY && resultCode == Activity.RESULT_CANCELED) {
+    //         Log.d(TAG, "promise resolved");
+    //         WritableMap map = Arguments.createMap();
+    //         map.putString("state", STATE_STOPPED);
+    //         promise.resolve(map);
+    //     }
+    // }
 
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
         Log.d(TAG, "on activity result");
