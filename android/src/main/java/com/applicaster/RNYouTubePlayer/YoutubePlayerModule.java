@@ -71,4 +71,10 @@ public class YoutubePlayerModule extends ReactContextBaseJavaModule implements A
             promise.resolve(map);
         }
     }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        // Do nothing - another useless commit
+        // by Facebook's @#%^**(*&$%%$) android contributors.
+    }
 }

@@ -4,11 +4,15 @@
 
 Play videos from YouTube using YouTube's API, in React Native.
 
+- Use version 2.0.0 for react-native >= 0.39
+- Use version 1.3.3 for react-native <= 0.38
+
 ## Known Issues
 :warning: Works reliably on version 0.34...0.37 of react-native :warning:
 Due to react-native's high change pace, I cannot guarentee that this package will work
 on other versions.
 Plays fullscreen videos only, in landscape mode only. PRs are welcome :)
+
 
 ## Notice
 - Since it is a React Native project, it was developed and tested on OSX only, I apologize for the linux folks.
