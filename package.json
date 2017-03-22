@@ -1,6 +1,6 @@
 {
   "name": "rn-youtube-android",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Play fullscreen videos in React-Native using Youtube API",
   "main": "youtube-player.js",
   "scripts": {},
