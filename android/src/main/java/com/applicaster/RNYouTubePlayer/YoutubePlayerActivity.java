@@ -37,6 +37,9 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         ylp.gravity = Gravity.CENTER;
         youTubeView.setLayoutParams(ylp);
 
+        // Helpful for selecting element in integration tests
+        youTubeView.setContentDescription("YouTube video player");
+
         layout.addView(youTubeView);
 
         setContentView(layout);
